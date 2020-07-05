@@ -7,6 +7,9 @@
     .row{
         padding: 0 2% ;
     }
+    header{
+        height: auto;
+    }
 
 }
 
@@ -18,9 +21,6 @@
     }
     section{
         padding: 60px 0;
-    }
-    .main-nav{
-        display: inline-block;
     }
     .long-copy{
         width: 80%;
@@ -57,6 +57,9 @@
     }
     .contact-form{
         width: 80%;
+    }
+    header{
+        height: auto;
     }
 }
 
@@ -112,7 +115,7 @@
         margin-top: 10px;
     }
     .sticky .mobile-nav-icon .responsive-nav-icon{
-        color: #555555;
+        color: #000000;
     }
 
     h1{
@@ -147,6 +150,9 @@
         margin-right: 10px;
         margin-top: 20px;
     }
+    header{
+        height: auto;
+    }
 }
 
 
@@ -155,7 +161,8 @@
     section{
         padding: 25px 0;
     }
-    .contact-form{
-        width: 100%;
+    header{
+        height: auto;
     }
+    
 }

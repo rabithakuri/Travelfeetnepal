@@ -4,17 +4,21 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-
-    <link rel="stylesheet" href="{% static 'css/slideshow.css' %}">
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
 
     <title>TravelFeetNepal</title>
 
@@ -22,6 +26,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
+    
 
 </head>
 <body>
@@ -35,38 +40,16 @@
 
                 <ul class="main-nav js--main-nav">
                     <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="{% url 'first:about' %}">About Us</a></li>
-                    <li><a href="#works">Visits</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="{% url 'first:itenary' %}">Trips</a></li>
                     <li><a href="{% url 'first:gallery' %}">Gallery</a></li>
-                    <li><a href="{% url 'first:itenary' %}">Itenary</a></li>
                     <li><a href="{% url 'first:contact' %}">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
                   <a class="mobile-nav-icon js--nav-icon"><ion-icon name="menu" class="responsive-nav-icon"></ion-icon></a>
             </div>
         </nav>
-
-        <div class="hero-text-box">
-          <div class="slideshow-container">
-              <div class="mySlides fade">
-                  <img src="{% static 'img/ite1.jpg' %}" style="width:100%">
-                  <div class="text">Caption Text</div>
-              </div>
-              <div class="mySlides fade">
-                  <img src="{% static 'img/ite2.jpg' %}" style="width:100%">
-                  <div class="text">Caption Two</div>
-              </div>
-              <div class="mySlides fade">
-                  <img src="{% static 'img/ite3.jpg' %}" style="width:100%">
-                  <div class="text">Caption Three</div>
-              </div>
-          </div>
-          <div style="text-align:center">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-          </div>
-        </div>
-  </header>
+    </header>
 
     {% block body_block %}
     {% endblock %}
@@ -106,12 +89,6 @@
             </p>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
-    <script src="{% static 'js/slideshow.js' %}"></script>
 
   </body>
 </html>

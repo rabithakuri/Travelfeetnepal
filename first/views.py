@@ -27,14 +27,11 @@ def users(request):
         else:
             return render(request,'first/index.html')
 
-def itenary(request):
-    return render(request,'first/itenary_main.html')
-
 def contact(request):
-    return render(request,'first/contact_main.html')
+    return render(request, 'first/contact_main.html')
 
 def gallery(request):
-    return render(request,'first/gallery_main.html')
+    return render(request, 'first/gallery_main.html')
 
-def about(request):
-    return render(request,'first/about_main.html')
+def itenary(request):
+    return render(request, 'first/itenary_main.html')
