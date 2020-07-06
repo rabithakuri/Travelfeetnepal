@@ -1,9 +1,5 @@
 /* Big tablet to 1200px(widths smaller than the 1140px row */
 @media all and (max-width: 1200px){
-    .hero-text-box{
-        width: 100%;
-        padding: 0 2%;
-    }
     .row{
         padding: 0 2% ;
     }
@@ -71,8 +67,7 @@
     section{
         padding: 30px 0;
     }
-    .row,
-    .hero-text-box{
+    .row{
         padding: 0 4%;
     }
     .col{
@@ -115,7 +110,7 @@
         margin-top: 10px;
     }
     .sticky .mobile-nav-icon .responsive-nav-icon{
-        color: #000000;
+        color: #050583;
     }
 
     h1{

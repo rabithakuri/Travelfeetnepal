@@ -4,14 +4,12 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-    
+    <link rel="stylesheet" type="text/css" href="{% static '/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/ionicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/queries.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
 
     <title>TravelFeetNepal</title>
@@ -21,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
     
-
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
 </head>
 <body>
     <header>
@@ -40,14 +38,12 @@
                     <li><a href="{% url 'first:contact' %}">Contact Us</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
-                  <a class="mobile-nav-icon js--nav-icon"><ion-icon name="menu" class="responsive-nav-icon"></ion-icon></a>
+                <a class="mobile-nav-icon js--nav-icon"> <ion-icon name="menu" class="responsive-nav-icon"></ion-icon></a>
             </div>
         </nav>
     </header>
-
-    {% block body_block %}
-    {% endblock %}
-
+{% block body_block %}
+{% endblock %}
     <footer>
         <div class="row">
             <div class="col span-1-of-2">
@@ -83,17 +79,13 @@
             </p>
         </div>
     </footer>
+
     
-    
-    <script src="{% static 'js/ionicons.js' %}">
-    </script>
-    <script src="{% static 'js/jquery.min.js' %}">
-    </script>
-    <script src="{% static 'js/jquery.waypoints.min.js' %}">
-    </script>
-    <script src="{% static 'js/script/script.js' %}">
-    </script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static '/js/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static '/js/script.js' %}"></script>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
   </body>
 </html>
