@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/ionicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/queries.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
+
+    <title>TravelFeetNepal</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+    <link rel="stylesheet" href="{% static '/css/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static '/css/slick/slick-theme.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="row">
+              <a href="{% url 'index' %}">
+                <img src="{% static 'img/rst.png' %}" alt="Omnifood logo" class="logo">
+                  <img src="{% static 'img/rst.png' %}" alt="Omnifood logo" class="logo-black">
+                </a>
+
+                <ul class="main-nav js--main-nav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="{% url 'first:itenary' %}">Trips</a></li>
+                    <li><a href="{% url 'first:gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'first:contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'first:faq' %}">FAQ</a></li>
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"> <ion-icon name="menu" class="responsive-nav-icon"></ion-icon></a>
+            </div>
+        </nav>
+    </header>
+{% block body_block %}
+{% endblock %}
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <a href="{% url 'index' %}">
+            <img src="{% static 'img/rst.png' %}" alt="TravelFeetNepal logo">
+            <h3 style="font-family:'Lato', 'Arial', sans-serif;;">TravelFeet Nepal</h3>
+        </a>
+        <p class="footer-company-name">© 2020 By TravelFeetNepal. All rights reserved.</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <ion-icon name="location-sharp" class="footer-location"></ion-icon>
+              <p><span>Sorakhutte, Thamel
+                 </span>
+                Kathmandu,Nepal</p>
+        </div>
+        <br>
+        <div>
+            <ion-icon name="call-sharp" class="footer-call"></ion-icon>
+            <p>+91 22-27782183</p>
+        </div>
+        <br>
+        <div>
+            <ion-icon name="mail-sharp" class="footer-mail"></ion-icon>
+            <p><a href="mailto:support@eduonix.com"> support@eduonix.com</a></p>
+        </div> 
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About the company</span>
+            We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+        <div class="footer-icons">
+            <a href="#"><ion-icon name="logo-facebook" class="ion-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter" class="ion-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram" class="ion-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin" class="ion-linkedin"></ion-icon></a>
+        </div>
+    </div>
+    <br>
+</footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static '/js/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static '/js/script.js' %}"></script>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+    <script src="{% static 'js/slick/slick.js' %}"></script>
+
+  </body>
+</html>

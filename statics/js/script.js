@@ -68,5 +68,15 @@ $(document).ready(function () {
 });
 
 
+/* testimonial/feedback js */
+$(document).ready(function(){
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+    });
+});
+
+
 
 

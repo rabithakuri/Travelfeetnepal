@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from django.contrib import messages
-from .models import Form
+from .models import Form,Feedback
 
 # from first import forms
 # from first.forms import forminput
 # Create your views here.
 
 def index(request):
-    return render(request, 'first/index.html')
+    testi = Feedback.objects.all()
+    # testi = Feedback.objects.filter(archived=False).order_by('id') [('-id')]=pixadibata 
+    context ={"testi":testi}
+    return render(request, 'first/index.html', context)
 
 def users(request):
     if request.method == 'POST':
@@ -35,3 +38,9 @@ def gallery(request):
 
 def itenary(request):
     return render(request, 'first/itenary_main.html')
+
+def faq(request):
+    return render(request, 'first/faq_main.html')
+
+def about(request):
+    return render(request, 'first/about_main.html')
