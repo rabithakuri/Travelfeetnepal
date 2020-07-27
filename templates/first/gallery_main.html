@@ -1,41 +1,43 @@
 {% extends 'first/menu.html' %}
 {% load static %}
-
+{% block title %}Gallery{% endblock %}
 {% block body_block %}
 <link rel="stylesheet" href="{% static 'css/gal_css/lightbox.min.css' %}">
 <script src="{% static 'js/gal_js/lightbox-plus-jquery.min.js' %}"></script>
 <link  href="{% static 'js/gal_js/lightbox-plus-jquery.min.map' %}">
 <style>
-  .row1 {
+  .rows {
     /* display: -ms-flexbox;*/
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    /* -ms-flex-wrap: wrap; */
     flex-wrap: wrap;
-    padding: 0 4px;
+    /*padding: 0 10px;*/
+    
   }
   
   /* Create four equal columns that sits next to each other */
-  .column1 {
-    -ms-flex: 33.3%; /* IE10 */
+  .columns {
+    /* -ms-flex: 33.3%; */
     flex: 33.3%;
-    max-width: 40%;
+    padding: 0px;
   }
-  
-  .column1 img{
+
+  .columns a img{
     vertical-align: middle;
-    width: 100%;
-   
+    /*width: 100%;*/
+    height : 300px;
   }
-  .column1 img:hover,
-  .column1 img:active {
+  .columns a img:hover,
+  .columns a img:active {
     opacity: 100%;
-      transform: scale(0.95);
-      transition: transform 0.5s, opacity 0.5s;
+    transform: scale(0.95);
+     /* transform: scale(0.95); */
+      transition: transform 0.3s, opacity 0.3s; 
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
-    .column1 {
+    .columns {
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
@@ -44,46 +46,29 @@
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
-    .column1 {
+    .columns {
       -ms-flex: 100%;
       flex: 100%;
       max-width: 100%;
     }
   }
-  
-
 
 </style>
 
-<section>
+<section style="background-color: #e6e4e4;padding-bottom: 10px;">
   
   <h2>Gallery</h2>
   
-  <div class="row1 js--section-about"> 
-    <div class="column1 ">
-      <a href="{% static 'img/imga/1.jpg' %}" data-lightbox="mygallery" data-title="FOOD"><img src="{% static 'img/imga/1.jpg' %}" style="width:100%" title="HEHE"></a>
-      <a href="{% static 'img/imga/2.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/2.jpg' %}" style="width:100%" title="HAHA"></a>
-      <a href="{% static 'img/imga/3.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/3.jpg' %}" style="width:100%" title="HUHU"></a>
-      <a href="{% static 'img/imga/4.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/4.jpg' %}" style="width:100%" title="HIHI"></a>
-      <a href="{% static 'img/imga/5.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/5.jpg' %}" style="width:100%" title="NONO"></a>
-      <a href="{% static 'img/imga/7.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/7.jpg' %}" style="width:100%" title="FEFE"></a>
-    </div>
-    <div class="column1 ">
-      <a href="{% static 'img/imga/6.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/6.jpg' %}" style="width:100%" title="HEHE"></a>
-      <a href="{% static 'img/imga/8.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/8.jpg' %}" style="width:100%" title="HAHA"></a>
-      <a href="{% static 'img/imga/9.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/9.jpg' %}" style="width:100%" title="HUHU"></a>
-      <a href="{% static 'img/imga/10.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/10.jpg' %}" style="width:100%" title="HIHI"></a>
-      <a href="{% static 'img/imga/11.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/11.jpg' %}" style="width:100%" title="NONO"></a>
-      <a href="{% static 'img/imga/12.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/12.jpg' %}" style="width:100%" title="FEFE"></a>
-    </div>  
-    <div class="column1 ">
-      <a href="{% static 'img/imga/13.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/13.jpg' %}" style="width:100%" title="HEHE"></a>
-      <a href="{% static 'img/imga/14.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/14.jpg' %}" style="width:100%" title="HAHA"></a>
-      <a href="{% static 'img/imga/cover.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/cover.jpg' %}" style="width:100%" title="HUHU"></a>
-      <a href="{% static 'img/imga/cover2.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/cover2.jpg' %}" style="width:100%" title="HIHI"></a>
-      <a href="{% static 'img/imga/1.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/1.jpg' %}" style="width:100%" title="NONO"></a>
-      <a href="{% static 'img/imga/2.jpg' %}" data-lightbox="mygallery"><img src="{% static 'img/imga/2.jpg' %}" style="width:100%" title="FEFE"></a>
-    </div>
+  <div class="rows js--section-about">  
+  {% for galls in galler %}
+        <div class="columns">
+          <div class='gul'>
+          <a href="{{galls.Image.url}}" data-lightbox="mygallery" data-title="{{galls.PicTitle}}">
+          <img src="{{galls.Image.url}}" title="{{galls.HoverTitle}}" style="width:100%" alt="{{galls.HoverTitle}}">
+          </a>
+          </div>
+        </div>
+  {% endfor %}
   </div>
 </section>
 

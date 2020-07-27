@@ -1,28 +1,48 @@
 {% extends 'first/menu.html' %}
 {% load static %}
+{% block title %}Trips{% endblock %}
 {% block body_block %}
 
-<section class="visits  js--section-about">
+<section class="visits  js--section-about" style="background-color: #e6e4e4;">
     <div class="row">
         <h2>Trips</h2>
     </div>
     <div class="row">
-        <div class="col span-1-of-3 box">
-            <a href="#"><img src="{% static 'img/it1.jpg' %}" alt="Lisbon"> <h3>Lisbon</h3> </a>
-            
-        </div>
-    
-        <div class="col span-1-of-3 box">
-            <a href="#"><img src="{% static 'img/it2.jpg' %}" alt="San Francisco"><h3>Lisbon</h3></a>
-            
-        </div>
-    
-        <div class="col span-1-of-3 box">
-            <a href="#"><img src="{% static 'img/it3.jpg' %}" alt="Berlin"><h3>Lisbon</h3></a>
-            
-        </div>
+    <div class="col span-1-of-3 box">
+        <a href="{% url 'first:annapurna' %}"><img src="{% static 'img/it1.jpg' %}" alt="annapurna"> <h3>Annapurna Base Camp</h3> </a>
+        
     </div>
-    <div class="row">
+
+    <div class="col span-1-of-3 box">
+        <a href="{% url 'first:langtang' %}"><img src="{% static 'img/it2.jpg' %}" alt="langtang"><h3>Langtang Valley</h3></a>
+        
+    </div>
+
+    <div class="col span-1-of-3 box">
+        <a href="{% url 'first:annapurnacircuit' %}"><img src="{% static 'img/it3.jpg' %}" alt="annapurna"><h3>Annapurna Circuit</h3></a>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col span-1-of-3 box">
+        <a href="{% url 'first:poonhill' %}"><img src="{% static 'img/it2.jpg' %}" alt="poonhill"><h3>Poonhill</h3></a>
+        
+    </div>
+
+    <div class="col span-1-of-3 box">
+        <a href="{% url 'first:mardihimal' %}"><img src="{% static 'img/it1.jpg' %}" alt="mardihimal"><h3>Mardi Himal</h3></a>
+       
+    </div>
+
+    <div class="col span-1-of-3 box">
+        <a href="{% url 'first:everestthreepasses' %}"><img src="{% static 'img/it3.jpg' %}" alt="Everest"><h3>Everest Three High Passes</h3></a>
+        
+    </div>
+</div>
+
+<!-- from here not done -->
+
+    <!-- <div class="row">
         <div class="col span-1-of-3 box">
             <a href="#"><img src="{% static 'img/it2.jpg' %}" alt="Lisbon"><h3>Lisbon</h3></a>
             
@@ -88,24 +108,7 @@
             <a href="#"><img src="{% static 'img/it3.jpg' %}" alt="Berlin"><h3>Lisbon</h3></a>
             
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col span-1-of-3 box">
-            <a href="#"><img src="{% static 'img/it2.jpg' %}" alt="Lisbon"><h3>Lisbon</h3></a>
-            
-        </div>
-    
-        <div class="col span-1-of-3 box">
-            <a href="#"><img src="{% static 'img/it1.jpg' %}" alt="San Francisco"><h3>Lisbon</h3></a>
-           
-        </div>
-    
-        <div class="col span-1-of-3 box">
-            <a href="#"><img src="{% static 'img/it3.jpg' %}" alt="Berlin"><h3>Lisbon</h3></a>
-            
-        </div>
-    </div>
+    </div> -->
     
     </section>
 

@@ -12,13 +12,18 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/queries.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
 
-    <title>TravelFeetNepal</title>
+    <title>
+    {% block title %}
+    TravelFeetNepal
+    {% endblock %}
+    </title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
-    
+    <link rel="stylesheet" href="{% static 'css/itinarycss/annapurna.css' %}">
+
     <link rel="stylesheet" href="{% static '/css/contact.css' %}">
     
 </head>
@@ -27,8 +32,8 @@
         <nav>
             <div class="row">
               <a href="{% url 'index' %}">
-                <img src="{% static 'img/rst.png' %}" alt="Omnifood logo" class="logo">
-                  <img src="{% static 'img/rst.png' %}" alt="Omnifood logo" class="logo-black">
+                <img src="{% static 'img/rst.png' %}" alt="TravelFeetNepal" class="logo">
+                  <img src="{% static 'img/rst.png' %}" alt="TravelFeetNepal" class="logo-black">
                 </a>
 
                 <ul class="main-nav js--main-nav">
@@ -48,7 +53,7 @@
 <footer class="footer-distributed">
     <div class="footer-left">
         <a href="{% url 'index' %}">
-            <img src="{% static 'img/rst.png' %}" alt="TravelFeetNepal logo">
+            <img src="{% static 'img/rst.png' %}" alt="TravelFeetNepal">
             <h3 style="font-family:'Lato', 'Arial', sans-serif;;">TravelFeet Nepal</h3>
         </a>
         <p class="footer-company-name">© 2020 By TravelFeetNepal. All rights reserved.</p>
@@ -86,12 +91,12 @@
     <br>
 </footer>
 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{% static '/js/waypoints/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static '/js/script.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static '/js/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static '/js/script.js' %}"></script>
 
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
-  </body>
+
+</body>
 </html>

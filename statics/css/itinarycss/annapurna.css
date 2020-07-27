@@ -1,0 +1,74 @@
+.collapsible {
+    background-color: #777;
+    color: #e6e4e4;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  .annapurnabase{
+    background-color: #e6e4e4;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 20px 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #e6e4e4;
+  }
+
+  /* slider */
+
+  #slider {
+    overflow: hidden;
+  }
+  #slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 15s slider infinite;
+  }
+  #slider figure img {
+    width: 20%;
+    float: left;
+  
+    height: 400px;
+  }
+  
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+    20% {
+      left: 0;
+    }
+    25% {
+      left: -100%;
+    }
+    45% {
+      left: -100%;
+    }
+    50% {
+      left: -200%;
+    }
+    70% {
+      left: -200%;
+    }
+    75% {
+      left: -300%;
+    }
+    95% {
+      left: -300%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
