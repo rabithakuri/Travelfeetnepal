@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.core.mail import send_mail
 from .models import Form,Feedback,GalleryImage,Information_slide
 
 # from first import forms
@@ -25,11 +26,34 @@ def users(request):
 
             post.save()
 
-            return index(request)
+            # send_mail(
+            # post.Name + 'from' + post.Country,#subject
+            # post.Comment,  #message
+            # post.Email,  #from email
+            # ['rabidarkers@gmail.com'],#to email -> this is python list ['email','2ndemail'] 'travelfeet.np@gmail.com',
+            # )
+
+
+            return render(request,'first/contact_main.html', {'post_Name': post.Name})
+            # return index(request)
             # else:
             #     return index("Fill Valid Information")
         else:
             return render(request,'first/index.html')
+
+        #send an email
+        # message_name = request.POST['name']
+        # message_email = request.POST['email']
+        # message_country = request.POST['country']
+        # message_comment = request.POST['message']
+        # send_mail(
+        #     message_name + 'from' + message_country,#subject
+        #     message_comment,  #message
+        #     message_email,  #from email
+        #     ['travelfeet.np@gmail.com'],#to email -> this is python list ['email','2ndemail']
+        # )
+
+
 
 def contact(request):
     return render(request, 'first/contact_main.html')

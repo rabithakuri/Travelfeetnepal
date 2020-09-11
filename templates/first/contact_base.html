@@ -1,10 +1,20 @@
 
 <section class="section-form js--section-about" id="form" style="background-color: white;">
-
-          <div class="row" >
-            <div style="text-align:center">
-              <h2>Contact Us</h2>
-              <p>Swing by for more information, or leave us a message:</p>
+            {% if post_Name %}
+            <div class="row" >
+              <div style="text-align:center">
+                <h3 style="font-size: 45px;">thanks &nbsp; {{ post_Name }}!</h3>
+                <p style="text-transform: uppercase; font-size: xx-large;">
+                  We Received Your Email And Will Respond Shortly...
+                </p>
+              </div>
+            </div>
+            {% else %}
+            <div class="row" >
+              <div style="text-align:center">
+                <h2>Contact Us</h2>
+                <p>Swing by for more information, or leave us a message:</p>
+              </div>
             </div>
             <div class="row">
               <div class="column">
@@ -277,10 +287,11 @@
                         var atposition=x.indexOf("@");
                         var dotposition=x.lastIndexOf(".");
                         if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
-                          alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
+                          alert("Please enter a valid e-mail address");  
+                          // address paxi yo " \n atpostion:"+atposition+"\n dotposition:"+dotposition"
                           return false;
                         }else {
-                          alert("Thank you You will be contact via email")
+                          alert("Thank you. You will be contact via email.")
                         }
                       }
                   </script>
@@ -288,4 +299,5 @@
                 </form>
               </div>
             </div>
+            {% endif %}
 </section>
